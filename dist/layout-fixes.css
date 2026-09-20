@@ -27,3 +27,8 @@ body[data-route="archive"]::before{opacity:.18!important;filter:blur(18px) satur
 
 /* Pull the metric cards closer to the shade information. */
 .morning-shade{min-height:78px!important}
+
+/* Use the supplied, shade-specific detail posters when available. */
+.shade-poster-card{position:relative;width:100%;overflow:hidden;border-radius:24px;background:#f3f3f3;box-shadow:0 20px 60px rgba(51,30,39,.24)}
+.shade-poster-image{display:block;width:100%;height:auto;max-height:calc(100dvh - 100px);object-fit:contain}
+.shade-poster-actions{position:absolute;top:18px;right:18px;display:flex;gap:8px}.shade-poster-actions button{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.85);border-radius:50%;background:rgba(84,45,62,.35);color:#fff;backdrop-filter:blur(12px)}.shade-poster-actions .icon{width:19px;height:19px}
