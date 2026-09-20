@@ -14,3 +14,13 @@
 body[data-route="archive"] .current-slab,body[data-route="archive"] .tile-colour{background:radial-gradient(ellipse at 18% 20%,color-mix(in srgb,var(--shade),white 62%) 0%,transparent 52%),linear-gradient(145deg,color-mix(in srgb,var(--shade),white 54%) 0%,color-mix(in srgb,var(--shade),white 12%) 46%,color-mix(in srgb,var(--shade),white 42%) 100%)!important;filter:none!important}
 body[data-route="archive"] .current-slab::before,body[data-route="archive"] .tile-colour::before{display:block!important;content:"";position:absolute;width:125%;height:38%;left:-18%;bottom:5%;border:0;background:rgba(255,255,255,.24);border-radius:50%;transform:rotate(-18deg);filter:blur(14px)}
 body[data-route="archive"] .current-slab::after,body[data-route="archive"] .tile-colour::after{display:block!important;content:"";position:absolute;width:80%;height:45%;right:-18%;top:-12%;border:0;background:color-mix(in srgb,var(--shade),white 30%);opacity:.28;border-radius:50%;transform:rotate(18deg);filter:blur(20px)}
+
+/* Keep the shade copy on two clear lines beside the product. */
+.morning-shade{width:41%!important;max-width:136px!important}
+.morning-shade h2{font-size:25px!important;max-width:136px!important;white-space:nowrap}
+.morning-shade p{max-width:98px!important;white-space:normal!important;line-height:1.35!important}
+.gold-lipstick{left:54%!important}
+
+/* A lighter, more transparent version of the original archive flower background. */
+body[data-route="archive"]{background:linear-gradient(rgba(255,255,255,.5),rgba(242,243,249,.42)),url("dream-bg.jpg") center/cover fixed no-repeat}
+body[data-route="archive"]::before{opacity:.18!important;filter:blur(18px) saturate(.68)}
