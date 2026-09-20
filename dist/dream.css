@@ -33,3 +33,12 @@ body[data-route="archive"]::after{background:linear-gradient(180deg,rgba(255,237
 
 /* Pale archive treatment from the approved mobile reference. */
 body[data-route="archive"]{background:linear-gradient(155deg,#fffdfd 0%,#fff5f9 45%,#f3f5ff 100%)}body[data-route="archive"]::before{opacity:.12;filter:blur(22px) saturate(.48)}body[data-route="archive"]::after{background:linear-gradient(180deg,rgba(255,255,255,.82),rgba(255,244,249,.68) 54%,rgba(238,242,255,.78))}.archive-screen .page-heading .eyebrow,.archive-screen .page-heading .intro{display:none}.current-shade{background:linear-gradient(145deg,rgba(255,255,255,.91),rgba(255,250,253,.76))!important}.shade-tile{transform:none!important;background:rgba(255,255,255,.82)!important}.tile-copy{background:rgba(255,255,255,.86)}
+
+/* Archive covers use one brighter shade per lipstick, with no decorative image. */
+body[data-route="archive"] .current-slab,
+body[data-route="archive"] .tile-colour,
+body[data-route="archive"] .modal-colour{background:color-mix(in srgb,var(--shade),white 24%)!important;filter:none!important}
+body[data-route="archive"] .current-slab::before,
+body[data-route="archive"] .current-slab::after,
+body[data-route="archive"] .tile-colour::before,
+body[data-route="archive"] .tile-colour::after{display:none!important}
