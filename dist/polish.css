@@ -1,0 +1,3 @@
+.personal-line::before{content:none}
+.skip:focus:not(:focus-visible){top:-100px}
+@media(max-width:760px){body[data-route="expression"] main{padding-top:112px}body[data-route="expression"] .page-heading h1{font-size:64px}}
