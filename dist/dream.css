@@ -42,3 +42,18 @@ body[data-route="archive"] .current-slab::before,
 body[data-route="archive"] .current-slab::after,
 body[data-route="archive"] .tile-colour::before,
 body[data-route="archive"] .tile-colour::after{display:none!important}
+
+/* Focus the morning card on the lipstick itself. */
+.morning-home>.routine-add,.morning-card-top>button:first-child{display:none!important}
+.morning-card-top{justify-content:flex-end!important}
+.morning-shade{width:56%!important}
+.morning-shade small{font-size:11px!important}
+.morning-shade h2{font-size:29px!important}
+.morning-shade p{font-size:12px!important}
+
+/* Full shade profile shown when a colour tile is opened. */
+.shade-detail-card{overflow:hidden;border:1px solid rgba(255,255,255,.86);border-radius:28px;background:linear-gradient(160deg,rgba(255,255,255,.88),rgba(246,224,233,.72));box-shadow:0 24px 70px rgba(73,40,58,.2),inset 0 1px 0 #fff;backdrop-filter:blur(24px)}
+.shade-detail-hero{position:relative;min-height:245px;padding:18px;background:linear-gradient(160deg,color-mix(in srgb,var(--shade),white 16%),color-mix(in srgb,var(--shade),black 8%));color:#fff}
+.shade-detail-tag{display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.2);font-size:12px}
+.shade-detail-actions{position:absolute;top:16px;right:16px;display:flex;gap:8px}.shade-detail-actions button{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.8);border-radius:50%;background:rgba(255,255,255,.18);color:#fff}.shade-detail-actions .icon{width:19px;height:19px}
+.shade-detail-body{padding:18px 20px 20px;color:#fff;background:linear-gradient(180deg,rgba(117,25,45,.84),rgba(71,21,30,.9))}.shade-detail-brand{margin:0 0 8px;font-size:10px;letter-spacing:.18em;opacity:.88}.shade-detail-body h2{margin:0 0 18px;font-size:30px;line-height:1.05}.shade-detail-body h2 b{margin-right:8px;font-size:20px;font-weight:500}.shade-detail-body h2 span{display:inline-block;margin-left:9px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.16);font-size:12px;vertical-align:middle}.shade-detail-row{display:grid;grid-template-columns:88px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.22);font-size:14px;line-height:1.4}.shade-detail-row b{font-weight:500}.shade-detail-row span{opacity:.9}.shade-detail-pills{display:flex;gap:8px;margin:18px 0 12px}.shade-detail-pills button{flex:1;padding:11px 8px;border-radius:999px;background:rgba(255,255,255,.14);color:#fff;font-size:11px}.shade-detail-pills .icon{width:14px;vertical-align:middle}.shade-detail-save{width:100%;padding:15px;border-radius:999px;background:#fff;color:#591c2b;font-size:16px;font-weight:700}
