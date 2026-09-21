@@ -27,8 +27,8 @@ const event=(text)=>{state.events.unshift({text,time:new Date().toISOString()});
 const toast=(text)=>{clearTimeout(toastTimer);const el=document.querySelector('#toast');el.textContent=text;el.classList.add('visible');toastTimer=setTimeout(()=>el.classList.remove('visible'),3200)};
 const heading=(en,title,description,action='')=>`<div class="page-heading"><div><p class="eyebrow">${en}</p><h1>${title}</h1>${description?`<p class="intro">${description}</p>`:''}</div>${action}</div>`;
 const main=document.querySelector('#main'),modal=document.querySelector('#modal');
-function showModal(html){lastFocus=document.activeElement;document.querySelector('#modal-content').innerHTML=html;if(!modal.open)modal.showModal()}
-function closeModal(){clearTimeout(readTimer);if('speechSynthesis' in window)speechSynthesis.cancel();modal.close();lastFocus?.isConnected&&lastFocus.focus()}
+function showModal(html){lastFocus=document.activeElement;document.querySelector('#modal-content').innerHTML=html;modal.classList.toggle('poster-modal',html.includes('shade-poster-card'));if(!modal.open)modal.showModal()}
+function closeModal(){clearTimeout(readTimer);if('speechSynthesis' in window)speechSynthesis.cancel();modal.classList.remove('poster-modal');modal.close();lastFocus?.isConnected&&lastFocus.focus()}
 modal.addEventListener('cancel',()=>{clearTimeout(readTimer);if('speechSynthesis'in window)speechSynthesis.cancel()});
 modal.addEventListener('click',e=>{if(e.target===modal){const r=modal.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeModal()}});
 function say(text){if(!('speechSynthesis'in window)){toast('当前浏览器不支持语音，请阅读弹窗中的完整文字。');return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='zh-CN';u.rate=.9;u.onerror=e=>{if(!['interrupted','canceled'].includes(e.error))toast('语音暂不可用，完整播报内容已显示在页面上。')};speechSynthesis.speak(u)}
