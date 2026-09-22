@@ -1,2 +1,4 @@
 qa-*.png
 qa.cjs
+work/
+dist/.gitignore
