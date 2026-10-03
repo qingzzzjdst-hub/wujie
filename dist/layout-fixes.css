@@ -58,3 +58,383 @@ body[data-route="archive"]::before{opacity:.18!important;filter:blur(18px) satur
 .morning-remaining{position:absolute;right:12px;top:54px;width:64px;height:64px;padding:0;display:grid;place-items:center;border:2px solid rgba(255,255,255,.94);border-radius:50%;background:rgba(255,255,255,.13);box-shadow:0 0 0 5px rgba(255,255,255,.12),inset 0 1px 0 rgba(255,255,255,.8),0 8px 24px rgba(83,59,85,.14);color:#fff;text-shadow:0 1px 8px rgba(83,59,85,.3);cursor:pointer;backdrop-filter:blur(12px)}.morning-remaining span{font-size:17px;font-weight:750;line-height:1}.morning-remaining small{display:block;margin-top:-17px;font-size:8px;letter-spacing:.08em;opacity:.86}.morning-remaining:active{transform:scale(.95)}.morning-remaining.is-low{animation:remaining-pulse 1.6s ease-in-out infinite}.morning-remaining.is-low::after{content:"低余量";position:absolute;right:-4px;bottom:-13px;padding:2px 5px;border-radius:999px;background:rgba(125,44,72,.68);font-size:8px;line-height:1.2;text-shadow:none}@keyframes remaining-pulse{50%{box-shadow:0 0 0 7px rgba(255,255,255,.22),0 0 22px rgba(255,255,255,.55)}}
 @media(max-width:760px){.morning-remaining{right:12px;top:58px;width:60px;height:60px}.morning-remaining span{font-size:16px}.morning-remaining small{margin-top:-16px;font-size:7px}}
 @media(max-height:760px) and (max-width:760px){.morning-remaining{top:49px;width:54px;height:54px}.morning-remaining span{font-size:15px}.morning-remaining small{margin-top:-15px;font-size:7px}}
+/* Latest mobile spacing annotations for the home card. */
+@media(max-width:760px){.morning-card-top{margin-top:20px}.morning-shade{margin-top:-12px}.morning-widgets>.ai-colour-stack,.morning-widgets>.read-lipstick-widget{margin-top:1px}.morning-widgets>.ai-colour-stack{padding-top:0;padding-bottom:0}}
+@media(max-height:760px) and (max-width:760px){.morning-card{margin-top:97px}}
+
+/* Display modes: preserve the home rhythm while replacing speech controls with text. */
+.morning-brief{align-content:center;padding:0 15px;border:1px solid rgba(255,255,255,.78);border-radius:25px;background:rgba(255,255,255,.42);box-shadow:inset 0 1px 0 rgba(255,255,255,.85)}
+.morning-brief>span{grid-column:1/-1;padding:0;color:#6f7180;font-size:11px;line-height:1.5;white-space:normal}
+.static-lipstick-info{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;text-align:left}
+.static-lipstick-info>strong{font-size:12px}
+.static-lipstick-info>span{display:block;color:#666b7b;font-size:9px;line-height:1.35}
+.static-lipstick-info>p{color:#747988;font-size:9px;line-height:1.4}
+.static-lipstick-info .stock-note{color:#8a1739;font-size:9px;font-weight:700}
+.home-namecard-info{width:100%;align-items:center;text-align:center;font:inherit;cursor:pointer}
+.home-namecard-info>strong{font-size:16px}
+.home-namecard-info:focus-visible{outline:2px solid #824258;outline-offset:3px}
+.mode-option-list{display:grid;gap:12px;margin-top:20px}
+.mode-option{width:100%;min-height:72px;padding:15px;display:flex;align-items:flex-start;gap:13px;border:1px solid var(--line);border-radius:18px;background:var(--paper);text-align:left}
+.mode-option>.icon{flex:none;margin-top:2px;color:var(--red)}
+.mode-option strong,.mode-option small{display:block}
+.mode-option strong{font-size:15px;font-weight:650}
+.mode-option small{margin-top:4px;color:var(--muted);font-size:12px;line-height:1.5}
+.mode-option[aria-pressed="true"]{border-color:var(--red);background:var(--wash)}
+.a11y:not(.visitor-mode) .mode-option{border:2px solid #595959;background:#fff}
+.a11y:not(.visitor-mode) .mode-option[aria-pressed="true"]{border-color:#000;background:#000;color:#fff}
+.a11y:not(.visitor-mode) .mode-option strong{font-size:18px}
+.a11y:not(.visitor-mode) .mode-option small{font-size:14px}
+.a11y:not(.visitor-mode) .mode-option>.icon{color:#000}
+.a11y:not(.visitor-mode) .mode-option[aria-pressed="true"]>.icon{color:#fff}
+.a11y:not(.visitor-mode) .mode-option[aria-pressed="true"] small{color:#fff}
+.a11y:not(.visitor-mode) .portrait-tools button{border:2px solid #000;background:#fff;color:#000;backdrop-filter:none}
+.a11y:not(.visitor-mode) .static-lipstick-info{border:2px solid #222;background:#fff}
+
+/* Guided, step-by-step shade selection for assisted reading. */
+.flow-step-help{padding:11px 13px;border:1px solid rgba(255,255,255,.82);border-radius:14px;background:rgba(255,255,255,.46);color:#575664;font-size:13px;line-height:1.55}
+.replay-confirmation{min-height:48px;margin:0 0 12px;display:flex;align-items:center;justify-content:center;gap:8px}
+.replay-confirmation .icon{width:19px;height:19px}
+.a11y:not(.visitor-mode) .shade-option{min-height:70px;border:2px solid #595959;background:#fff;color:#000}
+.a11y:not(.visitor-mode) .shade-option.selected,.a11y:not(.visitor-mode) .shade-option:focus-visible{border-color:#000;background:#eee}
+.a11y:not(.visitor-mode) .shade-option strong{font-size:18px;font-weight:700}
+.a11y:not(.visitor-mode) .shade-option small{font-size:14px;color:#222}
+.a11y:not(.visitor-mode) .flow-step-help{border:2px solid #595959;background:#fff;color:#111;font-size:16px}
+.a11y:not(.visitor-mode) .replay-confirmation{min-height:56px;border:2px solid #000;background:#000!important;color:#fff!important}
+
+/* High-contrast surfaces and edges for assisted reading. */
+body.a11y:not(.visitor-mode){--ink:#111!important;--muted:#292929!important;--red:#64152d!important;--line:#4a4a4a!important;background:#fff!important;background-image:none!important;color:#111!important;filter:none!important}
+body.a11y:not(.visitor-mode)::before,body.a11y:not(.visitor-mode)::after{display:none!important;opacity:0!important;filter:none!important}
+body.a11y:not(.visitor-mode) main,body.a11y:not(.visitor-mode) header,body.a11y:not(.visitor-mode) nav,body.a11y:not(.visitor-mode) section,body.a11y:not(.visitor-mode) article,body.a11y:not(.visitor-mode) dialog,body.a11y:not(.visitor-mode) footer{color:#111!important}
+.a11y:not(.visitor-mode) .morning-weather-head>span,.a11y:not(.visitor-mode) .morning-weather-head>p,.a11y:not(.visitor-mode) .morning-weather-head h1{color:#111!important;text-shadow:none!important}
+.a11y:not(.visitor-mode) .morning-audio,.a11y:not(.visitor-mode) .morning-brief,.a11y:not(.visitor-mode) .morning-card,.a11y:not(.visitor-mode) .weather-widget,.a11y:not(.visitor-mode) .remaining-widget,.a11y:not(.visitor-mode) .morning-foot,.a11y:not(.visitor-mode) .home-links-panel,.a11y:not(.visitor-mode) .panel,.a11y:not(.visitor-mode) .wide-panel,.a11y:not(.visitor-mode) .companion-card,.a11y:not(.visitor-mode) .diary-list,.a11y:not(.visitor-mode) .current-shade,.a11y:not(.visitor-mode) .shade-tile,.a11y:not(.visitor-mode) .contact-sheet,.a11y:not(.visitor-mode) .namecard,.a11y:not(.visitor-mode) .namecard-body,.a11y:not(.visitor-mode) .connections-settings-panel,.a11y:not(.visitor-mode) .visitor-lipstick-card,.a11y:not(.visitor-mode) .shade-detail-card,.a11y:not(.visitor-mode) .shade-detail-body,.a11y:not(.visitor-mode) .readout,.a11y:not(.visitor-mode) .shade-option,.a11y:not(.visitor-mode) .mode-option,.a11y:not(.visitor-mode) .field input,.a11y:not(.visitor-mode) .field textarea,.a11y:not(.visitor-mode) .field select,.a11y:not(.visitor-mode) .bound-select select{border:2px solid #333!important;border-radius:18px;background:#fff!important;color:#111!important;box-shadow:none!important;backdrop-filter:none!important}
+.a11y:not(.visitor-mode) .morning-card{border-radius:26px;background:#fff!important}
+.a11y:not(.visitor-mode) .static-lipstick-info,.a11y:not(.visitor-mode) .read-lipstick-widget,.a11y:not(.visitor-mode) .ai-colour-button,.a11y:not(.visitor-mode) .home-action-stack button,.a11y:not(.visitor-mode) .morning-card-top>button,.a11y:not(.visitor-mode) .morning-audio>button,.a11y:not(.visitor-mode) .morning-foot button,.a11y:not(.visitor-mode) .archive-read-button,.a11y:not(.visitor-mode) .current-actions button,.a11y:not(.visitor-mode) .shade-detail-pills button,.a11y:not(.visitor-mode) .namecard-contact-grid button{border:2px solid #333!important;background:#fff!important;color:#111!important;box-shadow:none!important}
+.a11y:not(.visitor-mode) .static-lipstick-info span,.a11y:not(.visitor-mode) .static-lipstick-info p,.a11y:not(.visitor-mode) .read-lipstick-widget>span,.a11y:not(.visitor-mode) .read-lipstick-widget small,.a11y:not(.visitor-mode) .ai-colour-button span,.a11y:not(.visitor-mode) .home-action-stack button,.a11y:not(.visitor-mode) .shade-option small,.a11y:not(.visitor-mode) .morning-brief>span,.a11y:not(.visitor-mode) .helper,.a11y:not(.visitor-mode) .intro,.a11y:not(.visitor-mode) .eyebrow,.a11y:not(.visitor-mode) .microline,.a11y:not(.visitor-mode) .step-count,.a11y:not(.visitor-mode) .page-heading .intro,.a11y:not(.visitor-mode) .namecard-head .card-edition,.a11y:not(.visitor-mode) .namecard-hero-note{color:#292929!important;text-shadow:none!important}
+.a11y:not(.visitor-mode) .morning-remaining{border:3px solid #111!important;background:#fff!important;color:#111!important;text-shadow:none!important;box-shadow:none!important}
+.a11y:not(.visitor-mode) .morning-remaining.is-low::after{border:1px solid #111;background:#111;color:#fff}
+.a11y:not(.visitor-mode) .morning-remaining small{color:#111!important}
+.a11y:not(.visitor-mode) .audio-wave{border:2px solid #333;background:#fff;box-shadow:none}
+.a11y:not(.visitor-mode) .audio-wave i{background:#64152d;opacity:1}
+.a11y:not(.visitor-mode) .morning-audio>button{color:#111!important}
+.a11y:not(.visitor-mode) .icon,.a11y:not(.visitor-mode) .ai-colour-button .icon,.a11y:not(.visitor-mode) .read-lipstick-widget .icon{color:#64152d!important}
+.a11y:not(.visitor-mode) .shade-option{min-height:72px;border:2px solid #333!important;border-radius:16px!important}
+.a11y:not(.visitor-mode) .shade-option.selected{border:3px solid #111!important;background:#e8e8e8!important;outline:2px solid #111;outline-offset:1px}
+.a11y:not(.visitor-mode) .shade-option .color-block{border:2px solid #333}
+.a11y:not(.visitor-mode) .flow-step-help{padding:10px 12px;border:2px solid #333;border-radius:12px;background:#fff;color:#111;font-size:16px;line-height:1.5}
+.a11y:not(.visitor-mode) .step-count{color:#64152d!important}
+.a11y:not(.visitor-mode) .mobile-nav,.a11y:not(.visitor-mode) .desktop-nav,.a11y:not(.visitor-mode) .mobile-nav a,.a11y:not(.visitor-mode) .desktop-nav a{border-color:#333!important;background:#fff!important;color:#111!important;box-shadow:none!important;backdrop-filter:none!important}
+.a11y:not(.visitor-mode) .mobile-nav a[aria-current="page"],.a11y:not(.visitor-mode) .desktop-nav a[aria-current="page"]{background:#111!important;color:#fff!important}
+.a11y:not(.visitor-mode) .namecard-head{border-bottom:2px solid #333;background:#eee!important;color:#111!important}
+.a11y:not(.visitor-mode) .namecard-head *,.a11y:not(.visitor-mode) .namecard-body *,.a11y:not(.visitor-mode) .namecard-contact-grid *,.a11y:not(.visitor-mode) .shade-detail-body *{color:#111!important;text-shadow:none!important}
+.a11y:not(.visitor-mode) .namecard-meet,.a11y:not(.visitor-mode) .btn.primary,.a11y:not(.visitor-mode) .shade-detail-save,.a11y:not(.visitor-mode) .replay-confirmation{border:2px solid #111!important;background:#111!important;color:#fff!important;box-shadow:none!important}
+.a11y:not(.visitor-mode) .namecard-meet *, .a11y:not(.visitor-mode) .btn.primary *, .a11y:not(.visitor-mode) .replay-confirmation *{color:#fff!important}
+.a11y:not(.visitor-mode) .shade-detail-hero{background:#eee!important;color:#111!important}
+.a11y:not(.visitor-mode) .shade-detail-tag,.a11y:not(.visitor-mode) .shade-detail-actions button{border:2px solid #333!important;background:#fff!important;color:#111!important}
+.a11y:not(.visitor-mode) .shade-detail-actions .icon{color:#111!important}
+.a11y:not(.visitor-mode) .shade-detail-row{border-color:#555!important}
+.a11y:not(.visitor-mode) .poster-dynamic{border:2px solid #fff;background:#111!important;color:#fff!important}
+.a11y:not(.visitor-mode) .poster-dynamic *{color:#fff!important}
+.a11y:not(.visitor-mode) .btn,.a11y:not(.visitor-mode) button,.a11y:not(.visitor-mode) select,.a11y:not(.visitor-mode) input,.a11y:not(.visitor-mode) textarea{outline-color:#111}
+.a11y:not(.visitor-mode) button:focus-visible,.a11y:not(.visitor-mode) a:focus-visible,.a11y:not(.visitor-mode) input:focus-visible,.a11y:not(.visitor-mode) select:focus-visible,.a11y:not(.visitor-mode) textarea:focus-visible{outline:4px solid #111!important;outline-offset:3px!important}
+
+/* Finish contrast overrides for text and controls inherited from the decorative theme. */
+body.a11y:not(.visitor-mode) :is(h1,h2,h3,p,span,small,strong,b,label,em,li){color:#111!important;text-shadow:none!important}
+.a11y:not(.visitor-mode) .morning-weather-head>span,.a11y:not(.visitor-mode) .morning-weather-head>p,.a11y:not(.visitor-mode) .morning-weather-head h1,.a11y:not(.visitor-mode) .morning-shade small,.a11y:not(.visitor-mode) .morning-shade h2,.a11y:not(.visitor-mode) .morning-shade p,.a11y:not(.visitor-mode) .morning-audio>span{color:#111!important;text-shadow:none!important}
+.a11y:not(.visitor-mode) .morning-remaining{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important}
+.a11y:not(.visitor-mode) .mobile-nav{border:2px solid #333!important}
+.a11y:not(.visitor-mode) .mobile-nav a[aria-current="page"],.a11y:not(.visitor-mode) .mobile-nav a[aria-current="page"] *,.a11y:not(.visitor-mode) .desktop-nav a[aria-current="page"],.a11y:not(.visitor-mode) .desktop-nav a[aria-current="page"] *,.a11y:not(.visitor-mode) .mode-option[aria-pressed="true"],.a11y:not(.visitor-mode) .mode-option[aria-pressed="true"] *,.a11y:not(.visitor-mode) .btn.primary,.a11y:not(.visitor-mode) .btn.primary *,.a11y:not(.visitor-mode) .namecard-meet,.a11y:not(.visitor-mode) .namecard-meet *,.a11y:not(.visitor-mode) .shade-detail-save,.a11y:not(.visitor-mode) .replay-confirmation,.a11y:not(.visitor-mode) .replay-confirmation *{color:#fff!important}
+.a11y:not(.visitor-mode) .poster-dynamic,.a11y:not(.visitor-mode) .poster-dynamic *{color:#fff!important}
+.a11y:not(.visitor-mode) .icon{color:#64152d!important}
+
+.a11y:not(.visitor-mode) .namecard-contact-grid,.a11y:not(.visitor-mode) .visitor-toolbar{border:2px solid #333!important;background:#fff!important;color:#111!important;box-shadow:none!important;backdrop-filter:none!important}
+.a11y:not(.visitor-mode) .settings-row,.a11y:not(.visitor-mode) .facts>div,.a11y:not(.visitor-mode) .diary-entry+.diary-entry,.a11y:not(.visitor-mode) .card-product,.a11y:not(.visitor-mode) .connection-preview-link,.a11y:not(.visitor-mode) .portrait-records{border-color:#444!important}
+.a11y:not(.visitor-mode) .settings-row,.a11y:not(.visitor-mode) .facts>div,.a11y:not(.visitor-mode) .diary-entry+.diary-entry{border-bottom-width:2px!important}
+.a11y:not(.visitor-mode) dialog{border:2px solid #111!important;background:#fff!important;color:#111!important;box-shadow:none!important;backdrop-filter:none!important}
+.a11y:not(.visitor-mode) dialog::backdrop{background:rgba(0,0,0,.62)!important;backdrop-filter:none!important}
+.a11y:not(.visitor-mode) .dialog-top .icon-button{border:2px solid #111!important;background:#fff!important;color:#111!important}
+.a11y:not(.visitor-mode) .toast{border:2px solid #fff!important;background:#111!important;color:#fff!important;font-size:15px!important}
+.expression-voice-guide{position:sticky;top:8px;z-index:5;margin:0 0 16px;padding:16px;border:1px solid var(--line);border-radius:18px;background:var(--paper);color:var(--ink)}
+.expression-guide-copy strong{display:block;font-size:16px}
+.expression-guide-copy p{margin:7px 0;color:var(--muted);font-size:13px;line-height:1.55}
+.expression-guide-copy small{display:block;min-height:18px;margin-bottom:8px;color:var(--muted);font-size:12px}
+.expression-guide-controls{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.expression-guide-controls[hidden],.expression-voice-guide [hidden]{display:none!important}
+.expression-voice-guide button{min-height:42px}
+.expression-guide-current{outline:3px solid #64152d!important;outline-offset:3px!important;border-radius:12px}
+body.a11y:not(.visitor-mode) .expression-voice-guide{border:2px solid #333;background:#fff;color:#111;box-shadow:none}
+body.a11y:not(.visitor-mode) .expression-guide-copy p,body.a11y:not(.visitor-mode) .expression-guide-copy small{color:#222}
+body.a11y:not(.visitor-mode) .expression-voice-guide button{border:2px solid #333;background:#fff;color:#111;box-shadow:none}
+body.a11y:not(.visitor-mode) .expression-voice-guide .btn.primary{background:#111;color:#fff}
+body.a11y:not(.visitor-mode) .expression-guide-current{outline-color:#111!important}
+@media(max-width:480px){.expression-guide-controls>*{flex:1 1 42%}.expression-voice-guide{padding:14px}}
+
+/* Give profile controls distinct color blocks without reducing text contrast. */
+body.a11y:not(.visitor-mode) .portrait-tools button{border-color:#271432!important;color:#fff!important;box-shadow:none!important}
+body.a11y:not(.visitor-mode) .portrait-tools button:nth-child(1){background:#74496f!important}
+body.a11y:not(.visitor-mode) .portrait-tools button:nth-child(2){background:#32758c!important}
+body.a11y:not(.visitor-mode) .portrait-tools button:nth-child(3){background:#a54370!important}
+body.a11y:not(.visitor-mode) .portrait-tools button .icon{color:#fff!important}
+.portrait-tools button:first-child .icon{fill:currentColor;stroke:none}
+body.a11y:not(.visitor-mode) .portrait-avatar{border:3px solid #542052!important;background:#fff!important;color:#111!important;box-shadow:none!important}
+body.a11y:not(.visitor-mode) .contact-icon{border:2px solid currentColor!important}
+body.a11y:not(.visitor-mode) .contact-icon.phone{background:#185aa5!important;color:#fff!important}
+body.a11y:not(.visitor-mode) .contact-icon.wechat{background:#176b3a!important;color:#fff!important}
+body.a11y:not(.visitor-mode) .contact-icon.email{background:#a51c30!important;color:#fff!important}
+body.a11y:not(.visitor-mode) .home-links-panel{border:2px solid #542052!important;background:#fff8fc!important}
+body.a11y:not(.visitor-mode) .home-links-panel .settings-row{margin:8px 0 0;padding:12px!important;border:2px solid #6d315c!important;border-radius:12px;background:#fde2ec!important}
+body.a11y:not(.visitor-mode) .home-links-panel .settings-row:nth-of-type(2){border-color:#3e428a!important;background:#e9e9ff!important}
+body.a11y:not(.visitor-mode) .home-links-panel .settings-row:nth-of-type(3){border-color:#15536d!important;background:#e0f5ff!important}
+body.a11y:not(.visitor-mode) .home-links-panel .save-row .btn.primary{background:#542052!important;border-color:#321038!important}
+body.a11y:not(.visitor-mode) .profile-section-title a{color:#542052!important}
+
+.ai-assistant-button{height:100%!important;min-height:96px!important;border-radius:22px!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;font:inherit;color:#414658;text-align:center}
+.ai-assistant-button strong{font-size:20px;font-weight:750}
+.ai-assistant-button>span:not(.ai-assistant-symbol){font-size:10px;color:#858795;line-height:1.25}
+.ai-assistant-symbol{width:24px;height:24px;color:#a85d83;font-size:25px;line-height:24px}
+.ai-assistant-button:active{transform:scale(.98)}
+@media(max-width:760px){.morning-widgets>.ai-assistant-stack{margin-top:1px;padding-top:0;padding-bottom:0}}
+body.a11y:not(.visitor-mode) .ai-assistant-button{border:2px solid #3e428a!important;background:#e5e2ff!important;color:#21143a!important;box-shadow:none!important}
+body.a11y:not(.visitor-mode) .ai-assistant-button>span:not(.ai-assistant-symbol){color:#32234f!important}
+body.a11y:not(.visitor-mode) .ai-assistant-symbol{color:#6f1d70}
+dialog.assistant-modal{width:min(520px,calc(100% - 24px));max-height:90vh;padding:18px;border-radius:24px;overflow:auto}
+dialog.assistant-modal #modal-content{min-width:0}
+.ai-assistant-panel{display:flex;flex-direction:column;gap:12px}
+.ai-assistant-panel h2{font-size:23px}
+.ai-assistant-messages{display:flex;flex-direction:column;gap:9px;max-height:min(35vh,270px);overflow:auto;padding:2px}
+.assistant-message{max-width:95%;padding:11px 13px;border:1px solid var(--line);border-radius:16px;background:#f2edff;color:#241332;font-size:14px;line-height:1.55}
+.assistant-message p{margin:0}
+.assistant-message.user{align-self:flex-end;background:#ead7f3}
+.assistant-message.assistant{align-self:flex-start;background:#e6f4ff}
+.assistant-message-action{margin-top:9px;min-height:38px;padding:7px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:#241332}
+.ai-assistant-prompts{display:flex;flex-wrap:wrap;gap:7px}
+.assistant-prompt{min-height:36px;padding:7px 10px;border:1px solid #624776;border-radius:999px;background:#f4e8fb;color:#32143f;font-size:12px}
+.ai-assistant-input{display:flex;align-items:center;gap:8px}
+.ai-assistant-input input{min-width:0;flex:1;min-height:46px;padding:9px 12px;border:1px solid var(--line);border-radius:13px;background:#fff;color:#241332}
+.ai-assistant-input .btn{min-height:46px;padding:8px 15px}
+body.a11y:not(.visitor-mode) .ai-assistant-messages{padding:10px;border:2px solid #4b3155;border-radius:16px;background:#fff4c2}
+body.a11y:not(.visitor-mode) .assistant-message,body.a11y:not(.visitor-mode) .assistant-prompt,body.a11y:not(.visitor-mode) .assistant-message-action{border:2px solid #3c2854;background:#fff;color:#241332;box-shadow:none}
+body.a11y:not(.visitor-mode) .assistant-message.user{border-color:#4b174a;background:#542052;color:#fff}
+body.a11y:not(.visitor-mode) .ai-assistant-input input{border:2px solid #3c2854;background:#fff;color:#241332}
+@media(max-width:480px){dialog.assistant-modal{width:calc(100% - 18px);max-height:88vh;padding:14px}.ai-assistant-messages{max-height:32vh}.assistant-prompt{font-size:11px}}
+.morning-weather-head>span{font-size:17px!important;line-height:1.35}
+/* Color accents for the high-contrast reading mode. */
+body.a11y:not(.visitor-mode){--ink:#241332!important;--muted:#46374f!important;--red:#8a1b57!important;--line:#543d5c!important;background:#fbf7ff!important;color:#241332!important}
+body.a11y:not(.visitor-mode) main,body.a11y:not(.visitor-mode) header,body.a11y:not(.visitor-mode) nav,body.a11y:not(.visitor-mode) section,body.a11y:not(.visitor-mode) article,body.a11y:not(.visitor-mode) dialog,body.a11y:not(.visitor-mode) footer{color:#241332!important}
+body.a11y:not(.visitor-mode) :is(h1,h2,h3,p,span,small,strong,b,label,em,li){color:#241332!important;text-shadow:none!important}
+body.a11y:not(.visitor-mode) .morning-card{border-color:#5a2756!important;background:#fff0f7!important}
+body.a11y:not(.visitor-mode) .weather-widget{border-color:#3e428a!important;background:#e9e9ff!important}
+body.a11y:not(.visitor-mode) .read-lipstick-widget{border-color:#15536d!important;background:#e0f5ff!important}
+body.a11y:not(.visitor-mode) .static-lipstick-info{border-color:#15536d!important;background:#e0f5ff!important}
+body.a11y:not(.visitor-mode) .morning-remaining{border-color:#694500!important;background:#ffe6a1!important;color:#301f00!important}
+body.a11y:not(.visitor-mode) .mobile-nav,body.a11y:not(.visitor-mode) .desktop-nav{border-color:#543d5c!important;background:#fff!important}
+body.a11y:not(.visitor-mode) .mobile-nav a[aria-current="page"],body.a11y:not(.visitor-mode) .desktop-nav a[aria-current="page"]{border-color:#4b174a!important;background:#542052!important;color:#fff!important}
+body.a11y:not(.visitor-mode) .mobile-nav a[aria-current="page"] *,body.a11y:not(.visitor-mode) .desktop-nav a[aria-current="page"] *{color:#fff!important}
+body.a11y:not(.visitor-mode) .btn.primary,body.a11y:not(.visitor-mode) .namecard-meet,body.a11y:not(.visitor-mode) .shade-detail-save,body.a11y:not(.visitor-mode) .replay-confirmation{border:2px solid #541038!important;background:#851c56!important;color:#fff!important;box-shadow:none!important}
+body.a11y:not(.visitor-mode) .btn.primary *,body.a11y:not(.visitor-mode) .namecard-meet *,body.a11y:not(.visitor-mode) .replay-confirmation *{color:#fff!important}
+body.a11y:not(.visitor-mode) .switch{border:2px solid #3d526b!important;background:#64748b!important;box-shadow:none!important}
+body.a11y:not(.visitor-mode) .switch:checked{border-color:#57133e!important;background:#a52268!important}
+body.a11y:not(.visitor-mode) .mode-option[aria-pressed="true"]{border-color:#4b174a!important;background:#542052!important;color:#fff!important}
+body.a11y:not(.visitor-mode) .mode-option[aria-pressed="true"] *{color:#fff!important}
+body.a11y:not(.visitor-mode) .icon{color:#7b235b!important}
+body.a11y:not(.visitor-mode) .morning-weather-head>span{font-size:20px!important;line-height:1.35}
+body.a11y:not(.visitor-mode) .assistant-message.user{background:#542052!important;color:#fff!important}
+body.a11y:not(.visitor-mode) .assistant-message.user *{color:#fff!important}
+html.assist-wallpaper{background-color:#fbf7ff;background-image:linear-gradient(rgba(255,255,255,.54),rgba(255,255,255,.62)),url("dream-bg.jpg");background-position:center;background-size:cover;background-attachment:fixed;background-repeat:no-repeat}
+body.a11y:not(.visitor-mode){position:relative;isolation:isolate;background:transparent!important;background-image:none!important}
+body.a11y:not(.visitor-mode) main{background:transparent!important}
+body.a11y:not(.visitor-mode)::before{content:""!important;display:block!important;position:fixed;inset:-24px;z-index:-1;pointer-events:none;background:url("dream-bg.jpg") center/cover no-repeat;filter:blur(20px) saturate(.84);transform:scale(1.08);opacity:.16}
+body.a11y:not(.visitor-mode) :is(.morning-card,.weather-widget,.read-lipstick-widget,.static-lipstick-info,.home-links-panel,.contact-sheet,.namecard,.namecard-contact-grid,.panel,.wide-panel,.current-shade,.shade-tile,.archive-tabs,.diary-list,.companion-card,.shade-detail-card,.shade-detail-body,.readout,.shade-option,.mode-option,.connections-settings-panel,.mobile-nav,.desktop-nav,dialog){border:2px solid #4b3155!important}
+body.a11y:not(.visitor-mode) .archive-tabs button{border:0!important;box-shadow:none!important}
+body.a11y:not(.visitor-mode) .archive-tabs button.selected{background:#ffe17a!important;color:#302300!important;box-shadow:none!important}
+body.a11y:not(.visitor-mode) .settings-row{border:2px solid #4b3155!important;border-radius:12px}
+body.a11y:not(.visitor-mode) :is(.field input,.field textarea,.field select,.bound-select select,.btn,.current-actions button,.shade-detail-actions button){border:2px solid #4b3155!important}
+body.a11y:not(.visitor-mode) .namecard-contact-grid button:not(:last-child){border-right:2px solid #4b3155!important}
+body.a11y:not(.visitor-mode) .card-product{border-top:2px solid #4b3155!important}
+body.a11y:not(.visitor-mode) .diary-entry+.diary-entry{border-top:2px solid #4b3155!important}
+body.a11y:not(.visitor-mode) .portrait-avatar span{color:#111!important}
+body:not(.a11y) dialog.assistant-modal{border:2px solid #bd9bad!important;background:#fffafd!important;box-shadow:0 26px 70px rgba(52,29,43,.34)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+body:not(.a11y) dialog.assistant-modal::backdrop{background:rgba(53,31,44,.42);backdrop-filter:blur(10px)}
+body:not(.a11y) dialog.assistant-modal .assistant-message.assistant{border-color:#d6c7e0;background:#f1ebf7;color:#322b37}
+body:not(.a11y) dialog.assistant-modal .assistant-prompt{border-color:#b99bb0;background:#f8eef5;color:#592e48}
+body:not(.a11y) dialog.assistant-modal .ai-assistant-input input{border:1px solid #bda4b4;background:#fff;color:#302830}
+
+/* Reflow the assisted archive at larger text sizes and keep selected states explicit. */
+body.a11y:not(.visitor-mode) .archive-screen{height:auto!important;min-height:calc(100dvh - 100px);overflow:visible!important}
+body.a11y:not(.visitor-mode) .archive-tabs{width:100%!important;height:auto!important;min-height:40px;padding:4px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:auto;overflow:hidden}
+body.a11y:not(.visitor-mode) .archive-tabs button{display:flex;min-width:0;height:auto!important;min-height:30px;align-self:stretch;align-items:center;justify-content:center;gap:.3em;padding:5px 8px!important;line-height:1.35;white-space:normal!important;overflow-wrap:anywhere}
+body.a11y:not(.visitor-mode) .archive-tabs button[aria-selected="true"]::after,body.a11y:not(.visitor-mode) .companion-tabs button[aria-pressed="true"]::after,body.a11y:not(.visitor-mode) .segmented button[aria-pressed="true"]::after{content:"✓";flex:0 0 auto;margin-inline-start:.3em;font-weight:800}
+body.a11y:not(.visitor-mode) .archive-journal{min-height:0;overflow:visible!important;padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+body.a11y:not(.visitor-mode) .shade-library{grid-template-columns:repeat(2,minmax(0,1fr));min-height:auto;overflow:visible!important;padding-bottom:calc(120px + env(safe-area-inset-bottom))}
+body.a11y:not(.visitor-mode) .shade-tile{height:auto!important;min-height:108px;grid-template-rows:minmax(66px,auto) auto!important;overflow:visible!important}
+body.a11y:not(.visitor-mode) .tile-copy,body.a11y:not(.visitor-mode) .tile-copy :is(strong,small,em){overflow:visible!important;white-space:normal!important;text-overflow:clip!important;overflow-wrap:anywhere}
+body.a11y:not(.visitor-mode) .shade-option[aria-pressed="true"]{outline:3px solid #241332!important;outline-offset:2px}
+body.a11y:not(.visitor-mode) .mobile-nav a[aria-current="page"]{border:2px solid #fff!important}
+body.a11y:not(.visitor-mode) .companion-card[data-action="speak-journal-summary"],body.a11y:not(.visitor-mode) .diary-list[data-action="speak-diary-list"],body.a11y:not(.visitor-mode) .diary-entry[role="button"]{cursor:pointer}
+body.a11y:not(.visitor-mode) .companion-card[data-action="speak-journal-summary"]:focus-visible,body.a11y:not(.visitor-mode) .diary-list[data-action="speak-diary-list"]:focus-visible,body.a11y:not(.visitor-mode) .diary-entry[role="button"]:focus-visible{outline:3px solid #241332;outline-offset:3px}
+body.a11y:not(.visitor-mode){font-size:1.125rem!important;line-height:1.55;--ink:#241332!important;--muted:#3e3344!important;--line:#4b3155!important}
+body.a11y:not(.visitor-mode) :is(p,label,li,input,textarea,select){font-size:max(1rem,1em)!important;line-height:1.45;white-space:normal!important;overflow-wrap:anywhere}
+body.a11y:not(.visitor-mode) :is(h1,h2,h3){white-space:normal!important;overflow-wrap:anywhere}
+body.a11y:not(.visitor-mode) :is(input,textarea,select)::placeholder{color:#49414b!important;opacity:1!important}
+body.a11y:not(.visitor-mode) dialog:not(.poster-modal){width:min(520px,calc(100vw - 24px))!important;max-width:calc(100vw - 24px)!important;height:auto!important;max-height:calc(100dvh - 24px)!important;overflow:auto!important}
+body.a11y:not(.visitor-mode) .shade-library,body.a11y:not(.visitor-mode) .archive-journal,body.a11y:not(.visitor-mode) .diary-list,body.a11y:not(.visitor-mode) .companion-card,body.a11y:not(.visitor-mode) .diary-entry,body.a11y:not(.visitor-mode) .tile-copy,body.a11y:not(.visitor-mode) .current-copy{min-width:0}
+body.a11y:not(.visitor-mode) main{padding-bottom:calc(150px + env(safe-area-inset-bottom))!important}
+body.a11y:not(.visitor-mode) .mobile-nav{height:auto!important;min-height:74px;align-items:stretch}
+body.a11y:not(.visitor-mode) .mobile-nav a{min-width:0;min-height:58px;white-space:normal!important;overflow-wrap:anywhere}
+@media(max-width:560px){body.a11y:not(.visitor-mode) .shade-library{grid-template-columns:minmax(0,1fr)}body.a11y:not(.visitor-mode) .archive-tabs{width:100%!important}}
+
+/* Keep assist text enlarged where it can reflow, while compact controls and shade cards retain their standard sizing. */
+body.a11y:not(.visitor-mode) .archive-tabs button{font-size:14px!important;line-height:1.2!important;white-space:nowrap!important}
+body.a11y:not(.visitor-mode) .read-lipstick-widget{box-sizing:border-box;width:100%;min-width:0;max-width:100%;overflow:hidden;padding:10px 7px;font-size:14px!important;line-height:1.2!important}
+body.a11y:not(.visitor-mode) .read-lipstick-widget strong{font-size:16px!important;line-height:1.2!important;white-space:nowrap!important}
+body.a11y:not(.visitor-mode) .read-lipstick-widget>span,body.a11y:not(.visitor-mode) .read-lipstick-widget small{font-size:12px!important;line-height:1.25!important;white-space:normal!important;overflow-wrap:anywhere}
+body.a11y:not(.visitor-mode) .read-lipstick-widget .icon{width:24px;height:24px}
+body.a11y:not(.visitor-mode) .morning-remaining{box-sizing:border-box;grid-template-rows:1fr auto;align-content:center;gap:1px;white-space:nowrap!important;overflow-wrap:normal!important}
+body.a11y:not(.visitor-mode) .morning-remaining>span{font-size:16px!important;line-height:1!important;white-space:nowrap!important}
+body.a11y:not(.visitor-mode) .morning-remaining small{margin:0!important;font-size:10px!important;line-height:1.1!important;letter-spacing:0;white-space:nowrap!important}
+body.a11y:not(.visitor-mode) .poster-modal{width:min(390px,calc(100% - 24px))!important;max-width:calc(100% - 24px)!important;padding:0!important;border:0!important;border-radius:24px!important;background:transparent!important;box-shadow:none!important;overflow:hidden!important}
+body.a11y:not(.visitor-mode) .poster-modal .shade-poster-card{border:0!important;border-radius:24px!important;background:#f3f3f3!important;box-shadow:none!important}
+body.a11y:not(.visitor-mode) .poster-dynamic{padding:0 2.5%!important;border:0!important;background:color-mix(in srgb,var(--shade),black 46%)!important;color:#fff!important;font-size:clamp(10px,2.6vw,13px)!important;line-height:1.25!important}
+body.a11y:not(.visitor-mode) .poster-dynamic-row{font-size:clamp(10px,2.6vw,13px)!important;line-height:1.25!important}
+body.a11y:not(.visitor-mode) .shade-poster-actions .icon{color:#fff!important}
+body.a11y:not(.visitor-mode) .shade-detail-card{border:1px solid rgba(255,255,255,.86)!important;border-radius:28px!important;background:linear-gradient(160deg,rgba(255,255,255,.88),rgba(246,224,233,.72))!important;box-shadow:0 24px 70px rgba(73,40,58,.2),inset 0 1px 0 #fff!important;backdrop-filter:blur(24px)!important;-webkit-backdrop-filter:blur(24px)!important}
+body.a11y:not(.visitor-mode) .shade-detail-hero{border:0!important;border-radius:0!important;background:linear-gradient(160deg,color-mix(in srgb,var(--shade),white 16%),color-mix(in srgb,var(--shade),black 8%))!important;color:#fff!important}
+body.a11y:not(.visitor-mode) .shade-detail-body{border:0!important;border-radius:0!important;background:linear-gradient(180deg,rgba(117,25,45,.84),rgba(71,21,30,.9))!important;color:#fff!important}
+body.a11y:not(.visitor-mode) .shade-detail-body *{color:#fff!important;text-shadow:none!important}
+body.a11y:not(.visitor-mode) .shade-detail-tag{border:0!important;background:rgba(255,255,255,.2)!important;color:#fff!important}
+body.a11y:not(.visitor-mode) .shade-detail-actions button{border:1px solid rgba(255,255,255,.8)!important;background:rgba(255,255,255,.18)!important;color:#fff!important;box-shadow:none!important}
+body.a11y:not(.visitor-mode) .shade-detail-actions .icon{color:#fff!important}
+body.a11y:not(.visitor-mode) .shade-detail-row{border-color:rgba(255,255,255,.22)!important}
+body.a11y:not(.visitor-mode) .shade-detail-pills button{border:0!important;background:rgba(255,255,255,.14)!important;color:#fff!important;box-shadow:none!important}
+body.a11y:not(.visitor-mode) .shade-detail-save{border:0!important;border-radius:999px!important;background:#fff!important;color:#591c2b!important;box-shadow:none!important}
+body.a11y:not(.visitor-mode) .portrait-avatar span{background:#fff!important;color:#111!important;text-shadow:none!important}
+
+body.a11y:not(.visitor-mode) .companion-card>small,body.a11y:not(.visitor-mode) .companion-card>span{font-size:14px!important;line-height:1.4!important}
+body.a11y:not(.visitor-mode) .diary-entry b{font-size:16px!important;line-height:1.35!important}
+body.a11y:not(.visitor-mode) .diary-entry small{font-size:13px!important;line-height:1.3!important}
+body.a11y:not(.visitor-mode) .tile-copy strong{font-size:16px!important;line-height:1.3!important}
+body.a11y:not(.visitor-mode) .tile-copy small,body.a11y:not(.visitor-mode) .tile-copy em{font-size:12px!important;line-height:1.3!important}
+body.a11y:not(.visitor-mode) .contact-sheet small{font-size:13px!important;line-height:1.35!important}
+body.a11y:not(.visitor-mode) .mobile-nav a{font-size:14px!important;line-height:1.25!important}
+
+body.a11y:not(.visitor-mode) .archive-read-button{box-sizing:border-box;width:64px;height:44px;gap:4px;padding:4px}
+body.a11y:not(.visitor-mode) .archive-read-button .icon{width:20px;height:20px}
+body.a11y:not(.visitor-mode) .archive-read-button span{font-size:12px!important;line-height:1!important;white-space:nowrap!important}
+body.a11y:not(.visitor-mode) .morning-remaining.is-low::after{font-size:10px!important;white-space:nowrap}
+body.a11y:not(.visitor-mode) .portrait-section-title a,body.a11y:not(.visitor-mode) .portrait-records{font-size:14px!important;line-height:1.35!important}
+
+/* Keep archive card content fully inside its rounded border in assisted mode. */
+body.a11y:not(.visitor-mode) .shade-tile{box-sizing:border-box;overflow:hidden!important;background-clip:padding-box}
+body.a11y:not(.visitor-mode) .shade-tile:focus-visible{outline:3px solid #241332!important;outline-offset:-5px!important}
+body.a11y:not(.visitor-mode) .tile-colour{box-sizing:border-box;width:100%;min-width:0;max-width:100%;overflow:hidden}
+body.a11y:not(.visitor-mode) .tile-copy{box-sizing:border-box;width:100%;min-width:0;max-width:100%;overflow:hidden;padding-inline:10px!important}
+body.a11y:not(.visitor-mode) .tile-copy :is(strong,small,em){max-width:100%;overflow:hidden!important;overflow-wrap:anywhere;white-space:normal!important;text-overflow:clip!important}
+body.a11y:not(.visitor-mode) .current-shade{box-sizing:border-box;flex:0 0 auto;height:auto;min-height:158px;padding:14px 14px 16px!important;overflow:hidden!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;align-items:stretch}
+body.a11y:not(.visitor-mode) .current-copy{box-sizing:border-box;width:100%;min-width:0;max-width:100%}
+body.a11y:not(.visitor-mode) .current-copy h2,body.a11y:not(.visitor-mode) .current-copy p{min-width:0;max-width:100%;overflow-wrap:anywhere}
+body.a11y:not(.visitor-mode) .current-copy p{margin:4px 0 10px;overflow:visible!important;white-space:normal!important;line-height:1.3!important}
+body.a11y:not(.visitor-mode) .current-actions{min-width:0;flex-wrap:wrap;margin-top:8px!important}
+body.a11y:not(.visitor-mode) .current-slab{box-sizing:border-box;width:100%;min-width:0;max-width:100%;min-height:132px;max-height:180px;align-self:center}
+
+/* Enlarge compact archive labels and actions in assisted mode without overflowing cards. */
+body.a11y:not(.visitor-mode) .current-label{max-width:100%;font-size:13px!important;line-height:1.25!important;white-space:normal;overflow-wrap:anywhere}
+body.a11y:not(.visitor-mode) .current-actions{column-gap:8px;row-gap:6px}
+body.a11y:not(.visitor-mode) .current-actions button{box-sizing:border-box;min-height:42px!important;padding:5px 10px!important;font-size:14px!important;line-height:1.2!important;white-space:normal!important;overflow-wrap:anywhere}
+body.a11y:not(.visitor-mode) .current-actions button:first-child{width:auto!important;min-width:74px;padding:5px 10px!important;display:flex!important;gap:6px}
+body.a11y:not(.visitor-mode) .current-actions .icon{width:18px;height:18px;flex:0 0 auto}
+body.a11y:not(.visitor-mode) .library-heading span{font-size:13px!important;line-height:1.3!important;white-space:nowrap}
+
+@media(max-width:760px){
+body.a11y:not(.visitor-mode) .archive-screen .page-heading{margin-top:0!important;padding-top:0!important}
+body.a11y:not(.visitor-mode) .archive-screen .page-heading h1{margin:0!important;padding:0!important}
+body.a11y:not(.visitor-mode) .archive-screen .archive-read-button{top:0!important;right:0!important;margin:0!important;padding:4px!important}
+body.a11y:not(.visitor-mode) .archive-screen .archive-tabs{margin-top:6px!important}
+}
+
+@media(max-width:760px){
+body.a11y:not(.visitor-mode) .archive-screen .page-heading h1{margin-top:-1px!important;margin-bottom:-1px!important}
+body.a11y:not(.visitor-mode) .archive-screen .archive-read-button{padding-inline:0!important;transform:translate(-13px,-7px)}
+body.a11y:not(.visitor-mode) .archive-screen .archive-tabs{padding-top:2px!important;padding-bottom:2px!important;margin-top:11px!important;margin-bottom:6px!important}
+body.a11y:not(.visitor-mode) .archive-screen .current-shade{margin-top:5px!important;overflow:hidden!important}
+body.a11y:not(.visitor-mode) .archive-screen .current-copy{position:static!important;padding-bottom:54px!important}
+body.a11y:not(.visitor-mode) .archive-screen .current-actions{position:absolute;left:14px;right:14px;bottom:14px;z-index:3;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:8px;min-width:0;margin:0!important}
+body.a11y:not(.visitor-mode) .archive-screen .current-actions button:first-child{flex:0 0 74px;width:74px!important;min-width:74px;min-height:42px!important;height:42px;padding:5px!important;justify-content:center}
+body.a11y:not(.visitor-mode) .archive-screen .current-actions button:nth-child(2){box-sizing:border-box;flex:0 1 160px;width:160px;max-width:calc(100% - 96px);min-width:0;height:42px;min-height:42px!important;margin:0;padding:6px 12px!important;display:flex;align-items:center;justify-content:space-between;white-space:normal!important;overflow-wrap:anywhere}
+body.a11y:not(.visitor-mode) .archive-screen .current-actions .icon{flex:0 0 auto}
+}
+body.a11y:not(.visitor-mode) .archive-screen .current-slab{margin-top:0!important;padding-top:0!important;max-width:100%;overflow:hidden}
+
+/* Latest assisted archive adjustments: keep the slab and actions within the card. */
+@media(max-width:760px){
+body.a11y:not(.visitor-mode) .archive-screen{margin-top:-8px!important}
+body.a11y:not(.visitor-mode) .archive-screen .page-heading h1{margin-top:0!important;margin-bottom:0!important;transform:translateX(-8px)}
+body.a11y:not(.visitor-mode) .archive-screen .current-slab{margin-bottom:23px!important}
+body.a11y:not(.visitor-mode) .archive-screen .current-actions{justify-content:flex-start}
+body.a11y:not(.visitor-mode) .archive-screen .current-actions button:nth-child(2){flex:0 1 86px;width:86px;max-width:calc(100% - 150px);min-width:0;margin:0;padding:0 8px!important;justify-content:center}
+}
+
+/* Keep the assisted composer aligned with the standard version, adding only a mic control. */
+.ai-assistant-input.has-voice-input{position:relative;display:flex;flex-direction:row;align-items:center;gap:8px}
+.ai-voice-status-live{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.ai-assistant-input.has-voice-input .ai-voice-input-button{grid-column:auto;flex:0 0 46px;box-sizing:border-box;width:46px;height:46px;min-height:46px;padding:0;display:grid;place-items:center;border:1px solid #b99bb0;border-radius:50%;background:#fff;color:#5a2858;font-size:0}
+.ai-assistant-input.has-voice-input .ai-voice-input-button .icon{width:21px;height:21px;color:currentColor}
+.ai-assistant-input.has-voice-input .ai-voice-input-button.is-listening{background:#851c56;color:#fff;box-shadow:0 0 0 4px rgba(133,28,86,.16)}
+.ai-assistant-input.has-voice-input .ai-voice-input-button:disabled{opacity:.5;cursor:not-allowed}
+.ai-assistant-input.has-voice-input .ai-voice-input-button:focus-visible{outline:3px solid #7b4777;outline-offset:2px}
+body.a11y:not(.visitor-mode) .ai-assistant-input.has-voice-input .ai-voice-input-button{border:2px solid #4b3155!important;background:#fff!important;color:#4b3155!important}
+body.a11y:not(.visitor-mode) .ai-assistant-input.has-voice-input .ai-voice-input-button.is-listening{background:#851c56!important;color:#fff!important}
+@media(max-width:380px){.ai-assistant-input.has-voice-input .ai-voice-input-button{flex-basis:42px;width:42px;height:42px;min-height:42px}}
+
+/* Let the assistant conversation use the viewport while keeping its controls docked. */
+dialog.assistant-modal{width:min(720px,calc(100vw - 24px));height:min(820px,calc(100dvh - 32px));max-height:calc(100dvh - 32px);padding:16px;display:flex;flex-direction:column;overflow:hidden}
+dialog.assistant-modal .dialog-top{flex:0 0 auto;margin-bottom:8px}
+dialog.assistant-modal #modal-content{flex:1;display:flex;min-width:0;min-height:0}
+dialog.assistant-modal .ai-assistant-panel{flex:1;min-width:0;min-height:0;gap:10px}
+dialog.assistant-modal .ai-assistant-panel h2{flex:0 0 auto;margin-bottom:0}
+dialog.assistant-modal .ai-assistant-messages{flex:1;min-height:0;max-height:none;overflow:auto;overscroll-behavior:contain}
+dialog.assistant-modal .ai-assistant-prompts,dialog.assistant-modal .ai-assistant-input{flex:0 0 auto}
+@media(max-width:480px){dialog.assistant-modal{width:calc(100vw - 16px);height:calc(100dvh - 16px);max-height:calc(100dvh - 16px);padding:12px;border-radius:20px}}
+body.a11y:not(.visitor-mode) dialog.assistant-modal{height:min(820px,calc(100dvh - 32px))!important;max-height:calc(100dvh - 32px)!important;overflow:hidden!important}
+@media(max-width:480px){body.a11y:not(.visitor-mode) dialog.assistant-modal{height:calc(100dvh - 16px)!important;max-height:calc(100dvh - 16px)!important}}
+
+/* The display mode picker only needs enough height for its heading and choices. */
+dialog.compact-modal{box-sizing:border-box;height:auto!important;min-height:0!important;max-height:min(50dvh,420px)!important;overflow-y:auto!important;padding:14px 18px!important}
+dialog.compact-modal .dialog-top{margin-bottom:6px}
+dialog.compact-modal h2{margin-bottom:8px}
+dialog.compact-modal p{margin:6px 0 12px}
+dialog.compact-modal .mode-option-list{gap:8px;margin-top:12px}
+dialog.compact-modal .mode-option{min-height:0;padding:12px}
+
+/* Let the short-screen home card follow its content. */
+@media(max-width:760px) and (max-height:760px){
+ body:not(.visitor-mode) .morning-card{min-height:0!important}
+}
+
+/* Assist mode's general dialog sizing must not stretch the mode picker. */
+body.a11y:not(.visitor-mode) dialog.compact-modal{box-sizing:border-box;width:min(390px,calc(100vw - 32px))!important;height:auto!important;min-height:0!important;max-height:min(50dvh,420px)!important;margin:auto!important;padding:14px 18px!important;overflow-y:auto!important}
+body.a11y:not(.visitor-mode) dialog.compact-modal #modal-content{flex:none!important;min-height:0!important}
+
+/* Standard mode shows weather and a short greeting in the luminous strip; it is not a player. */
+.morning-weather-strip{box-sizing:border-box;display:block;height:auto;min-height:58px;margin:8px 8px 0;padding:8px 14px;border:1px solid rgba(255,255,255,.86);border-radius:17px;background:rgba(255,255,255,.38);box-shadow:inset 0 1px 0 rgba(255,255,255,.92),0 10px 28px rgba(92,70,101,.13);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.morning-weather-copy{min-height:40px;display:flex;flex-direction:column;justify-content:center;gap:3px;color:#704b68;line-height:1.25}
+.morning-weather-copy strong{font-size:11px;font-weight:700;letter-spacing:.02em}
+.morning-weather-copy span{color:#885b76;font-size:10px}
+@media(max-width:760px){
+ .morning-weather-strip{min-height:56px;margin-top:8px;padding:7px 12px}
+ .morning-weather-copy{min-height:40px}
+ body:not(.a11y):not(.visitor-mode) .morning-card{margin-top:104px!important}
+}
+@media(max-width:760px) and (max-height:760px){body:not(.a11y):not(.visitor-mode) .morning-card{margin-top:96px!important}}
+
+/* Visitor preview stops before the voice controls baked into the poster image. */
+.visitor-poster-preview{aspect-ratio:1024/1040;overflow:hidden}
+.visitor-poster-meta{margin:0 5.8% 5.8%;padding:5px 6% 10px;border-top:1px solid rgba(255,255,255,.25);border-radius:0 0 20px 20px;background:#4b2632;background:color-mix(in srgb,var(--visitor-shade) 48%,#261822);color:#fff}
+.visitor-poster-meta>div{display:grid;grid-template-columns:30% minmax(0,1fr);gap:8px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.23);font-size:12px;line-height:1.35}
+.visitor-poster-meta>div:last-child{border-bottom:0}
+.visitor-poster-meta span{opacity:.82}
+.visitor-poster-meta strong{font-weight:500;overflow-wrap:anywhere}
+
+/* Standard archive details use the same complete framed card as visitor display. */
+body:not(.a11y) .poster-modal{max-height:calc(100dvh - 24px);overflow-y:auto}
+body:not(.a11y) .poster-modal .standard-poster-card{aspect-ratio:auto;min-height:0;border-radius:32px;background:rgba(255,255,255,.5);box-shadow:none}
+body:not(.a11y) .poster-modal .standard-poster-card .visitor-poster-preview{aspect-ratio:1024/1057}
+body:not(.a11y) .poster-modal .standard-poster-card .visitor-poster-meta{margin:0 7.8% 5%;padding:0 6% 10px;border-top:0;background:linear-gradient(color-mix(in srgb,var(--visitor-shade) 45%,#30242b),color-mix(in srgb,var(--visitor-shade) 35%,#261c24))}
