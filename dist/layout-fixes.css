@@ -456,5 +456,5 @@ body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) .dialog-top{posi
 body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) .icon-button{border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important}
 body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) #modal-content{width:100%;padding-top:22px;text-align:center}
 body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) h2{margin-bottom:18px;font-size:22px}
-body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) p{margin:0 auto 16px;max-width:30ch;line-height:1.75}
+body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) p{width:100%;max-width:none;margin:0 auto 16px;line-height:1.7;text-align:center;text-wrap:pretty}
 body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) .btn{margin-top:8px}
