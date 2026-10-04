@@ -436,5 +436,17 @@ body.a11y:not(.visitor-mode) dialog.compact-modal #modal-content{flex:none!impor
 /* Standard archive details use the same complete framed card as visitor display. */
 body:not(.a11y) .poster-modal{max-height:calc(100dvh - 24px);overflow-y:auto}
 body:not(.a11y) .poster-modal .standard-poster-card{aspect-ratio:auto;min-height:0;border-radius:32px;background:rgba(255,255,255,.5);box-shadow:none}
-body:not(.a11y) .poster-modal .standard-poster-card .visitor-poster-preview{aspect-ratio:1024/1057}
-body:not(.a11y) .poster-modal .standard-poster-card .visitor-poster-meta{margin:0 7.8% 5%;padding:0 6% 10px;border-top:0;background:linear-gradient(color-mix(in srgb,var(--visitor-shade) 45%,#30242b),color-mix(in srgb,var(--visitor-shade) 35%,#261c24))}
+body:not(.a11y) .poster-modal .standard-poster-card .visitor-poster-preview{aspect-ratio:1024/var(--poster-crop)}
+body:not(.a11y) .poster-modal .standard-poster-card .visitor-poster-meta{position:relative;margin:-1px var(--poster-inset) 5%;padding:0 6% 10px;border-top:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.16)),linear-gradient(90deg,var(--poster-left),var(--poster-mid),var(--poster-right))}
+.standard-poster-card[data-shade-id="106"]{--poster-crop:1015;--poster-inset:5.8%;--poster-left:#74544c;--poster-mid:#64453e;--poster-right:#81564c}
+.standard-poster-card[data-shade-id="118"]{--poster-crop:1027;--poster-inset:6.9%;--poster-left:#64403f;--poster-mid:#6c4442;--poster-right:#68413f}
+.standard-poster-card[data-shade-id="127"]{--poster-crop:1000;--poster-inset:8.1%;--poster-left:#453a31;--poster-mid:#3e332b;--poster-right:#3f362e}
+.standard-poster-card[data-shade-id="152"]{--poster-crop:1027;--poster-inset:5.1%;--poster-left:#5e251f;--poster-mid:#6c3732;--poster-right:#7a443a}
+.standard-poster-card[data-shade-id="163"]{--poster-crop:1037;--poster-inset:4.8%;--poster-left:#533833;--poster-mid:#644d49;--poster-right:#633f3b}
+.standard-poster-card[data-shade-id="188"]{--poster-crop:1025;--poster-inset:4.8%;--poster-left:#574946;--poster-mid:#645755;--poster-right:#665552}
+.standard-poster-card[data-shade-id="209"]{--poster-crop:1066;--poster-inset:5.7%;--poster-left:#32090b;--poster-mid:#31090a;--poster-right:#3f0b0e}
+.standard-poster-card[data-shade-id="225"]{--poster-crop:1032;--poster-inset:4.8%;--poster-left:#32241b;--poster-mid:#36271f;--poster-right:#413126}
+.standard-poster-card[data-shade-id="267"]{--poster-crop:999;--poster-inset:4.5%;--poster-left:#452a25;--poster-mid:#342826;--poster-right:#4c352d}
+.standard-poster-card[data-shade-id="314"]{--poster-crop:1058;--poster-inset:7.8%;--poster-left:#432d34;--poster-mid:#37232a;--poster-right:#563d43}
+.standard-poster-card[data-shade-id="328"]{--poster-crop:1010;--poster-inset:3.8%;--poster-left:#20151a;--poster-mid:#341e22;--poster-right:#2e1e23}
+.standard-poster-card[data-shade-id="356"]{--poster-crop:1046;--poster-inset:4.3%;--poster-left:#3b322f;--poster-mid:#3c322f;--poster-right:#443734}
