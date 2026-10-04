@@ -450,3 +450,11 @@ body:not(.a11y) .poster-modal .standard-poster-card .visitor-poster-meta{positio
 .standard-poster-card[data-shade-id="314"]{--poster-crop:1058;--poster-inset:7.8%;--poster-left:#432d34;--poster-mid:#37232a;--poster-right:#563d43}
 .standard-poster-card[data-shade-id="328"]{--poster-crop:1010;--poster-inset:3.8%;--poster-left:#20151a;--poster-mid:#341e22;--poster-right:#2e1e23}
 .standard-poster-card[data-shade-id="356"]{--poster-crop:1046;--poster-inset:4.3%;--poster-left:#3b322f;--poster-mid:#3c322f;--poster-right:#443734}
+.scent-field .scent-value{display:none!important}.scent-field .scent-trigger{width:100%;min-height:48px;padding:8px 12px;border:2px solid #4b3155;border-radius:16px;background:#fff;text-align:left}.scent-field .scent-trigger::after{content:"⌄";float:right}.scent-choices[hidden]{display:none!important}.scent-choices{display:grid;gap:4px;margin-top:6px;padding:6px;border:2px solid #4b3155;border-radius:16px;background:#fff}.scent-choices button{min-height:44px;padding:8px 12px;border-radius:10px;text-align:left}.scent-choices button:hover,.scent-choices button:focus-visible{background:#f1dfe7}.scent-choices button[aria-selected="true"]::after{content:"✓";float:right}
+body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog){height:min(50dvh,420px)!important;min-height:320px!important;display:flex;flex-direction:column;justify-content:center;padding:24px 26px!important}
+body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) .dialog-top{position:absolute;top:16px;left:18px;margin:0}
+body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) .icon-button{border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important}
+body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) #modal-content{width:100%;padding-top:22px;text-align:center}
+body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) h2{margin-bottom:18px;font-size:22px}
+body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) p{margin:0 auto 16px;max-width:30ch;line-height:1.75}
+body:not(.a11y) dialog.compact-modal:has(.contact-entry-dialog) .btn{margin-top:8px}
